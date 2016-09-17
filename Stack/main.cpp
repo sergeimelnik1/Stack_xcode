@@ -18,13 +18,15 @@ int main() {
     for(int i=0; i<N; ++i){
         push(i, &top);
     }
-    output(top);
+//    output(top);
     
-    pop(&top);
-    
-    
+    for(int i=0; i<N; ++i){
+        cout << pop(&top) << endl;
+    }
+//    output(top);
+
     return 0;
-}
+    }
 
 
 
@@ -43,8 +45,8 @@ void push( int num, elem **top ){
     *top = curr;//и выводим вершину обратно
 }
 int pop( elem **top ){
-    int tmp = (**top).num;
-    //    int tmp = (*top)->num;
+//    int tmp = (**top).num;
+        int tmp = (*top)->num;
     if ( *top == NULL ){
         return -1;
     }
@@ -54,12 +56,8 @@ int pop( elem **top ){
     return tmp;
 }
 void output(elem *top){
-
     while (top != NULL){
         cout << top->num << endl;
         top = top->prev;
     }
 }
-////вывод верхнего элемента int
-//int Top_int(elem *p)
-//{ return p->Aint[p->count-1]; }
