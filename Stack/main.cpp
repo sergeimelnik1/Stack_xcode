@@ -1,17 +1,18 @@
 #include <iostream>
 using namespace std;
-#define N 10
+
 struct elem{
     int num;
     elem *prev;
 };
+
 void push(int, elem**);
 int pop(elem**);
 void output(elem*);
 
 int main() {
     
-    
+    int const N = 10;
     elem *top(NULL);
     
     for(int i=0; i<N; ++i){
